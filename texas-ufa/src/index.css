@@ -1,0 +1,35 @@
+/**
+ * index.css styling is applied sitewide before any JavaScript renders.
+ */
+
+/* Apply site color themes via CSS vars */
+:root {
+  /* UFA Color Theming */
+  --ufa-dark-green: #005500;
+  --ufa-green: #3a7333;
+  --ufa-light-green: #8aac86;
+  --ufa-black: #000000;  
+  --ufa-white: #ffffff;   
+  --ufa-light: #d7dfd5;
+  --ufa-dark: #444444;
+  --ufa-grey: #5f665e;
+  --ufa-light-grey: #949494;
+
+  /* Navbar Theming */
+  --navbar: var(--ufa-light);
+  --navbar-field: var(--ufa-dark-green);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

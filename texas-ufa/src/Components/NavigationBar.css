@@ -1,0 +1,32 @@
+.navbar {
+    background-color: var(--navbar);
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-logo {
+    width: 25%;
+}
+
+.nav-list {
+    width: 50%;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-field-container {
+    padding: 10px;
+    align-self: flex-end;
+}
+    
+.navbar-field {    
+    color: var(--navbar-field);
+    white-space: nowrap;
+    text-decoration: none;
+}
+  
