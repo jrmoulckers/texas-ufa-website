@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import BasePage from '../BasePage'
 
 class CorporatePartners extends Component {
     state = {
@@ -40,6 +41,7 @@ class CorporatePartners extends Component {
                 <div id='home-content' dangerouslySetInnerHTML={
                     { __html: corporatePartners.content }
                 }></div>
+                <BasePage pageWPSlug='example' pageData={this.props.pageData}></BasePage>
             </div>
         );
     }

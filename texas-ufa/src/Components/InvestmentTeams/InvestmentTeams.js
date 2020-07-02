@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import BasePage from '../BasePage'
 
 class InvestmentTeams extends Component {
 
     render() {
         return (
-            <div>InvestmentTeams</div>
+            <BasePage pageWPSlug='example' pageData={this.props.pageData}></BasePage>
         );
     }
 }
