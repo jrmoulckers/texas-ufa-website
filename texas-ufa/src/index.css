@@ -4,6 +4,9 @@
 
 /* Apply site color themes via CSS vars */
 :root {
+  width: 100%;
+  height: 100%;
+
   /* UFA Color Theming */
   --ufa-dark-green: #005500;
   --ufa-green: #3a7333;
@@ -20,16 +23,43 @@
   --navbar-field: var(--ufa-dark-green);
 }
 
-body {
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media screen and (min-width: 768px) {
+  .content-below-navbar {
+    padding-top: 12vh;
+  }
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

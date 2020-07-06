@@ -5,10 +5,10 @@ import BasePage from '../BasePage'
 class OfficerBoard extends Component {
   render() {
     return (
-      <Fragment>
+      <div className='content-below-navbar'>
         <OfficerTeam/>
         <BasePage pageWPSlug='example' pageData={this.props.pageData}></BasePage>
-      </Fragment>
+      </div>
     );
   }
 }

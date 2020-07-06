@@ -1,0 +1,86 @@
+@import '../index.css';
+
+.base-page {
+    padding: 10%;
+    padding-top: 5%;
+}
+
+.base-page * {
+    padding-bottom: 2ch;
+}
+
+#page-title {
+    font-size: 3em;
+    text-align: center
+}
+
+@media screen and (min-width: 768px) {
+    .base-page {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+p {
+
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+
+}
+
+h4 {
+    font-size: 1em;
+    
+}
+
+h5 {
+
+}
+
+ul {
+
+}
+
+ol {
+
+}
+
+li {
+
+}
+
+strong {
+
+}
+
+blockquote {
+
+}
+
+cite {
+
+}
+
+
+.has-accent-color {
+
+}
+
+.has-text-color {
+
+}
+
+.has-text-align-center {
+    text-align: center;
+}
+
+

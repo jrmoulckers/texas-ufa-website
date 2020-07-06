@@ -35,7 +35,7 @@ class CorporatePartners extends Component {
     render() {
         const {corporatePartners,} = this.state;
         return (
-            <div>
+            <div className='content-below-navbar'>
                 <h1 id='home-title'>{corporatePartners.title}</h1>
                 {/* Add formatted content */}
                 <div id='home-content' dangerouslySetInnerHTML={

@@ -1,5 +1,6 @@
 import React, {Component,} from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import './BasePage.css'
 
 class BasePage extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class BasePage extends Component {
         // Pull out the page JSON data for this page's WordPress slug
         const pageJSON = pageData.find(element => (
             element.slug === wpSlug
-        ))
+        ));
         // Safely handle null return
         return pageJSON? pageJSON : {post_content_json:"{}"};
     }
@@ -47,25 +48,53 @@ class BasePage extends Component {
      */
     turnElementToHTMLContent(e) {
         var content = '';
-        switch(e.tag) {
-            case 'p':
-                content = `<${e.tag}>${e.child[0].text}</${e.tag}>`;
-                break;
-            case 'h1':
-            case 'h2':
-            case 'h3':
-            case 'h4': 
-            case 'h5':
-            case 'div':
-            case 'blockquote':
-            case 'figure':
-            case 'pre':
-            case 'ul':
-            case 'ol':
-            default:
-                content = `<p>${e.tag}: Not yet implemented :(</p>`;
+        console.log(e);
+        if(e.tag === 'img' || e.tag === 'path' || e.tag === 'a') {
+            return content;
         }
-        // Use react-html-parser api to turn string into JSX 
+        if(!e.child) {
+            return content;
+        }
+        e.child.forEach(el => {
+            var childContent = '';
+            var className = e.attr?.class? `class='${e.attr?.class}'` : '';
+            var style = e.attr?.style? `style='${e.attr?.style}'` : '';
+            var href = e.attr?.href? `href='${e.attr?.href}'` : '';
+            var src = e.attr?.src? `style='${e.attr?.src}'` : '';
+            if(!el.text) {
+                childContent += this.turnElementToHTMLContent(el)
+                content += `<${e.tag} ${className} ${style} ${href} ${src}>${childContent}</${e.tag}>`;
+            } else {
+                switch(e.tag) {
+                    case 'p':
+                    case 'strong':
+                    case 's':
+                    case 'a':
+                    case 'code':
+                    case 'figcaption':
+                    case 'blockquote':
+                    case 'h1':
+                    case 'h2':
+                    case 'h3':
+                    case 'h4': 
+                    case 'h5':
+                    case 'em':
+                    case 'div':
+                    case 'figure':
+                    case 'pre':
+                    case 'li':
+                    case 'ul':
+                    case 'ol':
+                    case 'cite':
+                    case 'span':
+                        content += `<${e.tag} ${className} ${style} ${href} ${src}>${el.text}</${e.tag}>`;
+                        break;
+                    default:
+                        content += `<p class='${e.attr.class}'>${e.tag}: Not yet implemented :(</p>`;
+                // Use react-html-parser api to turn string into JSX 
+                }
+            }            
+        })
         return content;
     }
 
@@ -91,8 +120,7 @@ class BasePage extends Component {
         const content = this.renderPageContentFromJSON(pageJSON);
 
         return (
-            <div>
-                <h1 id='page-title'>{pageTitle}</h1>
+            <div className='base-page' id={`page-${this.props.pageWPSlug}`}>
                 {ReactHtmlParser(content)}
             </div>
         );
