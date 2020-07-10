@@ -26,13 +26,18 @@ class Officer extends Component {
          * *More details fade in on mouse hover*
          */
         return (
-            <div class="officer-info">
-                <img src={officer_image.sizes.medium} alt={title.rendered}/>
-                <h2>{title.rendered}</h2>
-                <h3>{officer_position}</h3>
-                <h3>{officer_class_standing}</h3>
-                <h3>{officer_linked_page}</h3>
-            </div>
+            <a className="officer-card-container-link" href={officer_linked_page}>
+                <div className='officer-card'>
+                    <div className='officer-image-container'>
+                        <img className='officer-image' src={officer_image.sizes.thumbnail} alt={title.rendered}/>
+                    </div>
+                    <div className='officer-info-container'>
+                        <h2 className='officer-name'>{title.rendered}</h2>
+                        <p className='officer-position'>{officer_position}</p>
+                        <p className='officer-class-standing'>{officer_class_standing}</p>
+                    </div>
+                </div>
+            </a>
         ); 
     }
 

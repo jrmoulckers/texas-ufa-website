@@ -1,12 +1,10 @@
 @import '../index.css';
 
 .base-page {
-    padding: 10%;
     padding-top: 5%;
 }
 
 .base-page * {
-    padding-bottom: 2ch;
 }
 
 #page-title {

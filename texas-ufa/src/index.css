@@ -25,9 +25,12 @@
 
 * {
   font-family: Georgia, 'Times New Roman', Times, serif; 
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 html {
@@ -40,14 +43,14 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--ufa-white);
 }
 
 @media screen and (min-width: 768px) {
   .content-below-navbar {
-    padding-top: 12vh;
+    padding: 13vh, 0, 10vw, 10vw;
   }
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -62,4 +65,51 @@ code {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ufa-black);
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0 0 1.5em 0;
+  padding-bottom: 1.15em;
+  position: relative;
+}
+
+h1, h2 {
+  color: var(--ufa-dark-green);
+  font-weight: 600;
+  margin: 0 0 1em 0;
+  padding-bottom: .75em;
+  text-align: center;
+}
+
+h1::after, 
+h2::after, 
+h3::after, 
+h4::after, 
+h5::after, 
+h6::after {
+  color: var(--ufa-dark-green);
+  border-bottom: solid .25vh;
+  width: 20%;
+  bottom: 0;
+  content: '';
+  display: inline-block;
+  left: 0;
+  position: absolute;
+}
+
+h1::after, 
+h2::after {
+  width: 80%;
+  transform: translateX(10%);
+}
+
+p {
+  margin: 0 0 2em 0;
+}
+
+a {
+  text-decoration: none;
 }

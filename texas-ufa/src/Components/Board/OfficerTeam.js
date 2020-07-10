@@ -20,8 +20,9 @@ class OfficerTeam extends Component {
 
     render() {
         const {officers,} = this.state;
+        console.log(officers);
         return (
-            <div>
+            <div className='officers-container'>
                 {/* Map each officer to display */}
                 {officers?.map(officer => (
                     <Officer key={officer.id} officer={officer}/>

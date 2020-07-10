@@ -1,0 +1,164 @@
+@import '../../index.css';
+
+.officers-container h1, 
+.officers-container h2, 
+.officers-container h3, 
+.officers-container h4, 
+.officers-container h5, 
+.officers-container h6 {
+    text-align: left;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 1em 0 1.5em 0;
+    padding-bottom: 1.15em;
+    position: relative;
+}
+
+.officers-container h1::after, 
+.officers-container h2::after, 
+.officers-container h3::after, 
+.officers-container h4::after, 
+.officers-container h5::after, 
+.officers-container h6::after {
+    bottom: 0;
+    content: '';
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    width: 40%;
+    transform: translateX(0);
+}
+
+.officers-container {
+    margin: auto;
+    clear: both;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-auto-rows: 1fr;
+}
+
+.officer-card-container-link {
+    top: 0;
+    width: 20%;
+    display: inline-block;
+    margin-bottom: 5%;
+    padding: 0 2%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.officer-card {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.officer-image-container {
+    width: 100%;
+}
+
+.officer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.officer-info-container {
+    padding: 0px 16px 5px 16px;
+}
+
+.officer-name {
+    font-size: 1.3vw;
+    color: var(--ufa-dark-green);
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.officer-position {
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: var(--ufa-dark);
+    line-height: 1;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.officer-class-standing {
+    text-decoration: none;
+    color: var(--ufa-grey);
+    font-style: italic;
+    font-size: 0.9vw;
+}
+
+@media screen and (max-width: 790px) {
+    .officers-container {
+        margin: auto;
+        clear: both;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;   
+    }
+    
+    .officer-card-container-link {
+        top: 0;
+        width: 40%;
+        display: inline-block;
+        margin-bottom: 5%;
+        padding: 0 2%;
+        vertical-align: top;
+        text-align: left;
+    }
+    
+    .officer-card {
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    }
+    
+    .officer-image-container {
+        width: 100%;
+        height: 60%;
+    }
+    
+    .officer-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .officer-info-container {
+        padding: 2px 5% 2% 10%;
+    }
+    
+    .officer-name {
+        font-size: 1em;
+        font-weight: 600;
+        white-space: nowrap;
+        color: var(--ufa-dark-green);
+        line-height: 1;
+        margin: 0;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+    
+    .officer-position {
+        font-size: .8em;
+        font-weight: 600;
+        color: var(--ufa-dark);
+        line-height: 1;
+        margin: 0;
+        margin-bottom: .5em;
+    }
+    
+    .officer-class-standing {
+        text-decoration: none;
+        color: var(--ufa-grey);
+        font-style: italic;
+        font-size: .8em;
+    } 
+}
