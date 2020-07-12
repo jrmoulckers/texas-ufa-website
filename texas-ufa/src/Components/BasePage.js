@@ -18,6 +18,7 @@ class BasePage extends Component {
 
     getThisPageContentArrayX(pageJSON) {
         const contentJSON = JSON.parse(pageJSON.post_content_json)?.child?.[0].child;
+        console.log(contentJSON)
         //Safely handle null return
         return contentJSON? contentJSON: [];
     }
@@ -48,51 +49,38 @@ class BasePage extends Component {
      */
     turnElementToHTMLContent(e) {
         var content = '';
-        console.log(e);
-        if(e.tag === 'img' || e.tag === 'path' || e.tag === 'a') {
-            return content;
+
+        var className = e.attr?.class? `class='${e.attr?.class}'` : '';
+        var style = e.attr?.style? `style='${e.attr?.style}'` : '';
+        var href = e.attr?.href? `href='${e.attr?.href}'` : (
+            e.attr?.rel? `href='${e.attr?.rel}'` : '');
+        var src = e.attr?.src? `src='${e.attr?.src}'` : '';
+        var rel = e.attr?.rel? `rel='${e.attr?.rel}'` : '';
+
+        switch(e.tag) {
+            case 'hr':
+                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}></${e.tag}>`;
+                break;
+            case 'img':
+                var alt = e.attr?.alt? `alt='${e.attr?.alt}'` : '';
+                var sizes = e.attr?.sizes? `sizes='${e.attr?.sizes}'` : '';
+                var srcset = e.attr?.srcset? `srcset='${e.attr?.srcset}'` : '';
+                content += `<${e.tag} ${className} ${style} ${href} ${src} ${alt} ${sizes} ${srcset} ${rel}></${e.tag}>`;
+                break;
+            default:
         }
+
         if(!e.child) {
             return content;
         }
+
         e.child.forEach(el => {
             var childContent = '';
-            var className = e.attr?.class? `class='${e.attr?.class}'` : '';
-            var style = e.attr?.style? `style='${e.attr?.style}'` : '';
-            var href = e.attr?.href? `href='${e.attr?.href}'` : '';
-            var src = e.attr?.src? `style='${e.attr?.src}'` : '';
             if(!el.text) {
                 childContent += this.turnElementToHTMLContent(el)
-                content += `<${e.tag} ${className} ${style} ${href} ${src}>${childContent}</${e.tag}>`;
+                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}>${childContent}</${e.tag}>`;
             } else {
-                switch(e.tag) {
-                    case 'p':
-                    case 'strong':
-                    case 's':
-                    case 'a':
-                    case 'code':
-                    case 'figcaption':
-                    case 'blockquote':
-                    case 'h1':
-                    case 'h2':
-                    case 'h3':
-                    case 'h4': 
-                    case 'h5':
-                    case 'em':
-                    case 'div':
-                    case 'figure':
-                    case 'pre':
-                    case 'li':
-                    case 'ul':
-                    case 'ol':
-                    case 'cite':
-                    case 'span':
-                        content += `<${e.tag} ${className} ${style} ${href} ${src}>${el.text}</${e.tag}>`;
-                        break;
-                    default:
-                        content += `<p class='${e.attr.class}'>${e.tag}: Not yet implemented :(</p>`;
-                // Use react-html-parser api to turn string into JSX 
-                }
+                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}>${el.text}</${e.tag}>`;    
             }            
         })
         return content;
@@ -104,7 +92,6 @@ class BasePage extends Component {
     renderPageContentFromJSON(pageJSON) {
         //Get the page content as array of JSON if defined
         var contentArr = this.getThisPageContentArrayX(pageJSON);
-
         var stringHTMLContent = '';
         // Concatenate string-format content HTML into single string
         stringHTMLContent = contentArr.map(

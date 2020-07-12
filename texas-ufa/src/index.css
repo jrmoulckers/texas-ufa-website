@@ -48,7 +48,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .content-below-navbar {
-    padding: 13vh, 0, 10vw, 10vw;
+    padding-top: 13vh;
   }
 }
 
@@ -69,16 +69,13 @@ code {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--ufa-black);
-  font-weight: 300;
-  line-height: 1em;
-  margin: 0 0 1.5em 0;
-  padding-bottom: 1.15em;
+  font-size: x-large;
+  font-weight: 600;
+  margin: 0 0 1em 0;
   position: relative;
 }
 
 h1, h2 {
-  color: var(--ufa-dark-green);
-  font-weight: 600;
   margin: 0 0 1em 0;
   padding-bottom: .75em;
   text-align: center;
@@ -90,8 +87,7 @@ h3::after,
 h4::after, 
 h5::after, 
 h6::after {
-  color: var(--ufa-dark-green);
-  border-bottom: solid .25vh;
+  color: var(--ufa-dark);
   width: 20%;
   bottom: 0;
   content: '';
@@ -102,14 +98,29 @@ h6::after {
 
 h1::after, 
 h2::after {
-  width: 80%;
-  transform: translateX(10%);
+  border-bottom: solid .25vh;
+  width: 60%;
+  left: 20%;
 }
 
 p {
-  margin: 0 0 2em 0;
+  min-height: 1em;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border-top: solid .25vh var(--ufa-dark);
+  width: 20%;
+  margin: 2em 40%;
+}
+
+.footer {
+  height: 20vh;
 }

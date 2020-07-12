@@ -6,7 +6,7 @@ class Contact extends Component {
     render() {
         return (
             <div className='content-below-navbar'>
-                <BasePage pageWPSlug='example' pageData={this.props.pageData}></BasePage>
+                <BasePage pageWPSlug='contact' pageData={this.props.pageData}></BasePage>
             </div>
         );
     }

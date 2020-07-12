@@ -36,12 +36,7 @@ class CorporatePartners extends Component {
         const {corporatePartners,} = this.state;
         return (
             <div className='content-below-navbar'>
-                <h1 id='home-title'>{corporatePartners.title}</h1>
-                {/* Add formatted content */}
-                <div id='home-content' dangerouslySetInnerHTML={
-                    { __html: corporatePartners.content }
-                }></div>
-                <BasePage pageWPSlug='example' pageData={this.props.pageData}></BasePage>
+                <BasePage pageWPSlug='corporate-partners' pageData={this.props.pageData}></BasePage>
             </div>
         );
     }

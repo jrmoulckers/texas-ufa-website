@@ -1,7 +1,6 @@
 @import '../index.css';
 
 .base-page {
-    padding-top: 5%;
 }
 
 .base-page * {
@@ -36,8 +35,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1em;
-    
+    font-size: 1em; 
 }
 
 h5 {
@@ -68,17 +66,51 @@ cite {
 
 }
 
+.aligncenter {
+    text-align: center;
+    align-content: center;
+}
 
 .has-accent-color {
-
+    color: var(--ufa-dark-green);
 }
 
 .has-text-color {
-
+    color: var(--ufa-dark-green);
 }
 
 .has-text-align-center {
     text-align: center;
+}
+
+.wp-block-button {
+    color: var(--ufa-light-green);
+    border: .2vw solid var(--ufa-dark) !important;
+    background-color: var(--ufa-light);
+    width: 10vw;
+    height: 2em;
+    line-height: 2em;
+    cursor: pointer;
+    border-radius: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 1em;
+}
+
+.wp-block-button * {
+    font-weight: 600;
+    position: relative;
+    font-size: 1.3vw;
+    color: var(--ufa-dark-green);
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+div.wp-block-button:hover {
+    background-color: var(--ufa-light-grey);
+    color: var(--ufa-white);
 }
 
 

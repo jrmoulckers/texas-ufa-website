@@ -1,5 +1,9 @@
 @import '../../index.css';
 
+#page-home {
+    padding-top: 10vh;
+}
+
 #homepage-image-container {
     height: auto;
     width: 100%;
@@ -8,46 +12,10 @@
 
 #homepage-image {
     height: auto;
+    transform: translateY(-15%);
+    -ms-transform: translateY(-15%);
     width: 100%;
     opacity: .80;
-}
-
-#join-us-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    color: var(--ufa-light-green);
-    border-style: dashed;
-    border: 3px solid var(--ufa-dark) !important;
-    background-color: rgba(255,255,255,.4);
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#join-us-btn * {
-    font-weight: 600;
-    line-height: 1em;
-    position: relative;
-    font-size: 1.3vw;
-    color: var(--ufa-dark-green);
-    line-height: 1;
-    margin: 0;
-    margin-bottom: 5%;
-    margin-top: 5%;
-}
-
-#join-us-btn:hover {
-    background-color: var(--ufa-grey);
-}
-
-h1 {
-    text-decoration: none;
-    color: var(--ufa-dark-green);
 }
 
 @media screen and (min-width: 768px) {

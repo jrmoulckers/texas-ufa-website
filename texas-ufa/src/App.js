@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from './Components/Home/Home';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 import About from './Components/About/About';
 import InvestmentTeams from './Components/InvestmentTeams/InvestmentTeams';
@@ -54,17 +55,19 @@ class App extends React.Component {
       <div>            
         <Router>
           <Header/>
-          <Switch>
-              <Route exact path='/' render={()=><Home pageData={pageData}/>}/>
-              <Route path='/about' render={()=><About pageData={pageData}/>}/>
-              <Route path='/investment-teams' render={()=><InvestmentTeams pageData={pageData}/>}/>
-              <Route path='/officer-board' render={()=><OfficerBoard pageData={pageData}/>}/>
-              <Route path='/alumni-network' render={()=><Alumni pageData={pageData}/>}/>
-              <Route path='/corporate-partners' render={()=><CorporatePartners pageData={pageData}/>}/>
-              <Route path='/join-us' render={()=><JoinUs pageData={pageData}/>}/>
-              <Route path='/contact' render={()=><Contact pageData={pageData}/>}/>
-          </Switch>
-          {/* <Footer/> */}
+          <div className='content-below-navbar'>
+            <Switch>
+                <Route exact path='/' render={()=><Home pageData={pageData}/>}/>
+                <Route path='/about' render={()=><About pageData={pageData}/>}/>
+                <Route path='/investment-teams' render={()=><InvestmentTeams pageData={pageData}/>}/>
+                <Route path='/officer-board' render={()=><OfficerBoard pageData={pageData}/>}/>
+                <Route path='/alumni-network' render={()=><Alumni pageData={pageData}/>}/>
+                <Route path='/corporate-partners' render={()=><CorporatePartners pageData={pageData}/>}/>
+                <Route path='/join-us' render={()=><JoinUs pageData={pageData}/>}/>
+                <Route path='/contact' render={()=><Contact pageData={pageData}/>}/>
+            </Switch>
+          </div>
+          <Footer/>
         </Router>
       </div>
     );

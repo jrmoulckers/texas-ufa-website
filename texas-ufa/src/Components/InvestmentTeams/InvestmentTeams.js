@@ -6,7 +6,7 @@ class InvestmentTeams extends Component {
     render() {
         return (
             <div className='content-below-navbar'>
-                <BasePage pageWPSlug='example' pageData={this.props.pageData}></BasePage>
+                <BasePage pageWPSlug='investment-teams' pageData={this.props.pageData}></BasePage>
             </div>
         );
     }

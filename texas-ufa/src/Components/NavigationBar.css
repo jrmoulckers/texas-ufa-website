@@ -4,7 +4,6 @@
     background-color: var(--navbar);
     overflow: hidden;
     z-index: 1;
-    font-size: 18px;
     background-color: var(--ufa-light-green);
     padding-bottom: 10px;
 }

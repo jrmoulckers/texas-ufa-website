@@ -22,9 +22,7 @@ class Home extends Component {
                     </Link>
                 </button>
             </div>
-            <div className='content-below-navbar'>
-                <BasePage pageWPSlug='home' pageData={this.props.pageData}></BasePage>
-            </div>
+            <BasePage pageWPSlug='home' pageData={this.props.pageData}></BasePage>
         </Fragment>
         );
     }
