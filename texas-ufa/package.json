@@ -1,5 +1,8 @@
 {
   "name": "texas-ufa",
+  "author": "Jeffrey Moulckers",
+  "contributors": ["Jeffrey Moulckers", "Louis Bariselle", "Texas UFA"],
+  "description": "Website for the University Finance Association at UT Austin",
   "homepage": "https://texasufa.com",
   "version": "0.1.0",
   "private": true,
