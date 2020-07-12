@@ -149,6 +149,11 @@ a {
   height: 5em;
 }
 
+.message-404, .title-404 {
+  text-align: center;
+  top: 15vh;
+}
+
 @media screen and (min-width: 1150px) {
   .content-below-navbar {
     padding-top: 7vh;

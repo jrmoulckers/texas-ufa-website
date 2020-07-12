@@ -15,6 +15,7 @@ import Alumni from './Components/Alumni/Alumni';
 import CorporatePartners from './Components/CorporatePartners/CorporatePartners';
 import JoinUs from './Components/JoinUs/JoinUs';
 import Contact from './Components/Contact/Contact';
+import NotFoundPage from './NotFoundPage';
 
 class App extends React.Component {
   constructor() {
@@ -31,7 +32,7 @@ class App extends React.Component {
 
   async fetchDataFromWordPress() {
     // Retrieve page page JSON data from WordPress DB via unique slug=<page title>
-    await axios.get('http://texasufa.com/wp/wp-json/wp/v2/pages/')
+    await axios.get('https://texasufa.com/wp/wp-json/wp/v2/pages/')
         .then(res => {
             // Pull out the page JSON data
             const pageData = res.data;
@@ -65,6 +66,7 @@ class App extends React.Component {
                 <Route path='/corporate-partners' render={()=><CorporatePartners pageData={pageData}/>}/>
                 <Route path='/join-us' render={()=><JoinUs pageData={pageData}/>}/>
                 <Route path='/contact' render={()=><Contact pageData={pageData}/>}/>
+                <Route path='*' component={NotFoundPage}/>
             </Switch>
           </div>
           <Footer/>

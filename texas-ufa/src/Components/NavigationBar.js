@@ -1,4 +1,4 @@
-import React, {Component, Fragment,} from 'react';
+import React, {Component,} from 'react';
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import './NavigationBar.css';
@@ -21,14 +21,17 @@ class NavigationBar extends Component {
         >
           <i className='fa fa-bars noselect'></i>
         </div>
-        <div className='nav-brand'>
-              <img 
-                id='brand-logo-img'
-                src='http://texasufa.com/wp/wp-content/uploads/2020/06/UFA-Transparent-Logo.png'
-                href='#'
-                alt='Texas UFA Brand Logo'
-              ></img>
-        </div>
+        <Link to='/'>
+          <div className='nav-brand'>
+                <img 
+                  id='brand-logo-img'
+                  src='https://texasufa.com/wp/wp-content/uploads/2020/07/UFA-Transparent-Logo.png'
+                  href='#'
+                  alt='Texas UFA Brand Logo'
+                ></img>
+          </div>        
+        </Link>
+
         <ul 
           className={`nav-list ${!this.state.collapsed&&'active'}`} 
           id='js-menu'

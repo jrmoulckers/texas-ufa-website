@@ -3,9 +3,6 @@ import ReactHtmlParser from 'react-html-parser';
 import './BasePage.css'
 
 class BasePage extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     getThisPageJSONX(pageData, wpSlug) {
         // Pull out the page JSON data for this page's WordPress slug
@@ -18,7 +15,6 @@ class BasePage extends Component {
 
     getThisPageContentArrayX(pageJSON) {
         const contentJSON = JSON.parse(pageJSON.post_content_json)?.child?.[0].child;
-        console.log(contentJSON)
         //Safely handle null return
         return contentJSON? contentJSON: [];
     }
@@ -72,7 +68,6 @@ class BasePage extends Component {
 
 
     turnElementToHTMLContent(e) {
-        var content = '';
         var childContent = '';
         if(!e.child) {
             return this.createContent(e, childContent);
@@ -105,7 +100,6 @@ class BasePage extends Component {
 
     render() {
         const pageJSON = this.getThisPageJSONX(this.props.pageData, this.props.pageWPSlug);
-        const pageTitle = pageJSON.title?.rendered;
         const content = this.renderPageContentFromJSON(pageJSON);
 
         return (
