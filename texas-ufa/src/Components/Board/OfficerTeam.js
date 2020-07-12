@@ -10,7 +10,7 @@ class OfficerTeam extends Component {
 
     componentDidMount() {
         // Retrieve officer JSON data from WordPress DB
-        axios.get('https://texasufa.com/wp/wp-json/wp/v2/officers')
+        axios.get('https://texasufa.com/wp/wp-json/wp/v2/officers?per_page=100')
             .then(res => this.setState ({
                 officers: res?.data,
                 isLoaded: true,

@@ -21,6 +21,7 @@
   /* Navbar Theming */
   --navbar: var(--ufa-light);
   --navbar-field: var(--ufa-dark-green);
+  overflow-x: hidden;
 }
 
 * {
@@ -46,11 +47,9 @@ body {
   background-color: var(--ufa-white);
 }
 
-@media screen and (min-width: 768px) {
-  .content-below-navbar {
-    padding-top: 13vh;
-  }
+.page {
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -67,18 +66,32 @@ code {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1em; 
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--ufa-black);
-  font-size: x-large;
   font-weight: 600;
   margin: 0 0 1em 0;
   position: relative;
 }
 
 h1, h2 {
-  margin: 0 0 1em 0;
+  margin: 0 0 1.5em 0;
   padding-bottom: .75em;
-  text-align: center;
 }
 
 h1::after, 
@@ -115,12 +128,29 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style: square;
+  list-style-position: outside;
+  padding-left: 10%;
+  padding-bottom: 2em;
+}
+
 hr {
   border-top: solid .25vh var(--ufa-dark);
   width: 20%;
-  margin: 2em 40%;
+  margin: 4em 40%;
+}
+
+a {
+  color: var(--ufa-dark-green);
 }
 
 .footer {
-  height: 20vh;
+  height: 5em;
+}
+
+@media screen and (min-width: 1150px) {
+  .content-below-navbar {
+    padding-top: 7vh;
+  }
 }

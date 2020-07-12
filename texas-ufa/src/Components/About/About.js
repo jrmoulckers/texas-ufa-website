@@ -5,9 +5,7 @@ class About extends Component {
 
     render() {
         return (
-            <div className='content-below-navbar'>
-                <BasePage pageWPSlug='about' pageData={this.props.pageData}></BasePage>
-            </div>
+            <BasePage pageWPSlug='about' pageData={this.props.pageData}></BasePage>
         );
     }
 }

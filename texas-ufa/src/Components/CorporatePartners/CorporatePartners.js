@@ -35,9 +35,7 @@ class CorporatePartners extends Component {
     render() {
         const {corporatePartners,} = this.state;
         return (
-            <div className='content-below-navbar'>
-                <BasePage pageWPSlug='corporate-partners' pageData={this.props.pageData}></BasePage>
-            </div>
+            <BasePage pageWPSlug='corporate-partners' pageData={this.props.pageData}></BasePage>
         );
     }
 }

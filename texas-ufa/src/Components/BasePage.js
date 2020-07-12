@@ -47,7 +47,7 @@ class BasePage extends Component {
      *      Any Widgets
      *      
      */
-    turnElementToHTMLContent(e) {
+    createContent(e, childContent) {
         var content = '';
 
         var className = e.attr?.class? `class='${e.attr?.class}'` : '';
@@ -58,9 +58,6 @@ class BasePage extends Component {
         var rel = e.attr?.rel? `rel='${e.attr?.rel}'` : '';
 
         switch(e.tag) {
-            case 'hr':
-                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}></${e.tag}>`;
-                break;
             case 'img':
                 var alt = e.attr?.alt? `alt='${e.attr?.alt}'` : '';
                 var sizes = e.attr?.sizes? `sizes='${e.attr?.sizes}'` : '';
@@ -68,22 +65,27 @@ class BasePage extends Component {
                 content += `<${e.tag} ${className} ${style} ${href} ${src} ${alt} ${sizes} ${srcset} ${rel}></${e.tag}>`;
                 break;
             default:
+                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}>${childContent}</${e.tag}>`;
         }
+        return content;
+    }
 
+
+    turnElementToHTMLContent(e) {
+        var content = '';
+        var childContent = '';
         if(!e.child) {
-            return content;
+            return this.createContent(e, childContent);
         }
 
         e.child.forEach(el => {
-            var childContent = '';
-            if(!el.text) {
-                childContent += this.turnElementToHTMLContent(el)
-                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}>${childContent}</${e.tag}>`;
+            if(el.text) {
+                childContent += el.text;    
             } else {
-                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}>${el.text}</${e.tag}>`;    
+                childContent += this.turnElementToHTMLContent(el)
             }            
         })
-        return content;
+        return this.createContent(e, childContent);
     }
 
     /**
@@ -107,7 +109,7 @@ class BasePage extends Component {
         const content = this.renderPageContentFromJSON(pageJSON);
 
         return (
-            <div className='base-page' id={`page-${this.props.pageWPSlug}`}>
+            <div className='base-page' id={`wp-page-${this.props.pageWPSlug}`}>
                 {ReactHtmlParser(content)}
             </div>
         );

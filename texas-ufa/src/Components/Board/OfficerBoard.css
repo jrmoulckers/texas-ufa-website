@@ -1,5 +1,14 @@
 @import '../../index.css';
 
+.officer-page {
+    
+}
+
+.officers-container {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 .officers-container h1, 
 .officers-container h2, 
 .officers-container h3, 

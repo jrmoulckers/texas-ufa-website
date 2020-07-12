@@ -1,68 +1,27 @@
 @import '../index.css';
 
 .base-page {
+    padding-top: 5vh;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .base-page * {
 }
 
 #page-title {
-    font-size: 3em;
     text-align: center
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1150px) {
     .base-page {
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-top: 13vh;
+        padding-left: 25%;
+        padding-right: 25%;
     }
 }
 
 p {
-
-}
-
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 3em;
-}
-
-h3 {
-
-}
-
-h4 {
-    font-size: 1em; 
-}
-
-h5 {
-
-}
-
-ul {
-
-}
-
-ol {
-
-}
-
-li {
-
-}
-
-strong {
-
-}
-
-blockquote {
-
-}
-
-cite {
 
 }
 
@@ -77,6 +36,10 @@ cite {
 
 .has-text-color {
     color: var(--ufa-dark-green);
+}
+
+hr, .has-text-color {
+    border-color: var(--ufa-dark-green);
 }
 
 .has-text-align-center {

@@ -5,9 +5,7 @@ class JoinUs extends Component {
 
     render() {
         return (
-            <div className='content-below-navbar'>
-                <BasePage pageWPSlug='join-us' pageData={this.props.pageData}></BasePage>
-            </div>
+            <BasePage pageWPSlug='join-us' pageData={this.props.pageData}></BasePage>
         );
     }
 }

@@ -1,34 +1,33 @@
 @import '../../index.css';
 
-#page-home {
-    padding-top: 10vh;
+#wp-page-home {
+    padding-top: 5vh;
 }
 
 #homepage-image-container {
-    height: auto;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
 }
 
 #homepage-image {
     height: auto;
-    transform: translateY(-15%);
-    -ms-transform: translateY(-15%);
+    transform: translateY(0);
+    -ms-transform: translateY(0);
     width: 100%;
     opacity: .80;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1150px) {
+    
+    #wp-page-home {
+        padding-top: 10vh;
+    }
+
     #homepage-image-container {
         top: 0;
-        height: 100vh;
-        width: 100%;
         overflow: hidden;
     }
     
     #homepage-image {
-        height: auto;
-        width: 100%;
-        opacity: .80;
     }
 }

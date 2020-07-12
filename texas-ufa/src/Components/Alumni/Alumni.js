@@ -5,9 +5,7 @@ class Alumni extends Component {
 
     render() {
         return (
-            <div className='content-below-navbar'>
-                <BasePage pageWPSlug='alumni' pageData={this.props.pageData}></BasePage>
-            </div>
+            <BasePage pageWPSlug='alumni' pageData={this.props.pageData}></BasePage>
         );
     }
 }

@@ -6,10 +6,10 @@ import './OfficerBoard.css'
 class OfficerBoard extends Component {
   render() {
     return (
-      <div className='content-below-navbar'>
+      <Fragment>
         <BasePage pageWPSlug='board' pageData={this.props.pageData}></BasePage>
-        <OfficerTeam/>
-     </div>
+        <OfficerTeam/>        
+      </Fragment>
     );
   }
 }

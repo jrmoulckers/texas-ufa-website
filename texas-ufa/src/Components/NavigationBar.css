@@ -4,8 +4,7 @@
     background-color: var(--navbar);
     overflow: hidden;
     z-index: 1;
-    background-color: var(--ufa-light-green);
-    padding-bottom: 10px;
+    background-image: linear-gradient(260deg, var(--ufa-green) 0%, var(--ufa-light-green) 100%);
 }
 
 .nav-brand {
@@ -15,33 +14,35 @@
 .nav-list {
     list-style-type: none;
     display: none;
+    padding-bottom: 0;
+    padding-left: 0;
 }
 
 .nav-link,
 .nav-brand {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--ufa-light);
+    white-space: nowrap;
 }
 
 .nav-list li {
     text-align: center;
-    margin: 15px auto;
+    margin: .75em auto;
 }
 
 .nav-brand {
     display: inline-block;
-    font-size: 22px;
     margin-top: 10px;
     margin-left: 20px;
 }
 
 .navbar-toggle {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 5.5vh;
+    right: 5vw;
     cursor: pointer;
     color: var(--ufa-white);
-    font-size: 24px;
+    font-size: xx-large;
 }
 
 .active {
@@ -50,10 +51,10 @@
 
 .nav-brand:hover,
 .nav-link:hover {
-    color: var(--ufa-light-green);
+    color: var(--ufa-grey);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1150px) {
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -68,6 +69,7 @@
     .nav-list {
         display: flex;
         margin-right: 5%;
+        padding-left: 0;
         flex-direction: row;
         justify-content: flex-end;
     }
@@ -77,14 +79,15 @@
     }
 
     .nav-link {
-        margin-left: 40px;
+        font-size: 1.35em;
+        margin-left: 2em;
     }
 
     .nav-brand {
         margin-top: 0;
         margin-left: 5vw;
         margin-bottom: 1vh;
-        height: 14vh;
+        height: 13vh;
         width: auto;
     }
 
