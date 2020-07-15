@@ -61,6 +61,7 @@ class NavigationBar extends Component {
             <Link to='/contact' className='nav-link'>Contact</Link>
           </li>
         </ul>
+        {this.props.children}
       </div>
     );
   }

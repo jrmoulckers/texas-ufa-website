@@ -1,10 +1,14 @@
-import React, {Component,} from 'react';
+import React, {Component, Fragment,} from 'react';
 import NavigationBar from './NavigationBar';
 
 class Header extends Component {
     render() {
         return (
-            <NavigationBar/>
+            <Fragment>
+                <NavigationBar/>
+                {this.props.children}
+            </Fragment>
+
         )
     }
 }

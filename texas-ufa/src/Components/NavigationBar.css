@@ -63,7 +63,6 @@
         width: 100%;
         position: fixed;
         align-items: center;
-        background-image: linear-gradient(260deg, var(--ufa-green) 0%, var(--ufa-light-green) 100%);
     }
 
     .nav-list {

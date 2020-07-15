@@ -1,0 +1,19 @@
+@import "../index.css";
+
+.progress-bar {
+    position: fixed;
+    bottom: 0vh;
+    height: .5vh;
+    background-image: linear-gradient(260deg, var(--ufa-dark-green) 0%, var(--ufa-green) 100%);
+    z-index: 2;
+  }
+  
+  @media screen and (min-width: 1150px) {
+  
+    .progress-bar {
+      position: fixed;
+      top: 12.5vh;
+      height: .5vh;
+      z-index: 2;
+    }
+  }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from './Components/Home/Home';
 import Header from './Components/Header';
+import ProgressBar from './Components/ProgressBar';
 import Footer from './Components/Footer';
 
 import About from './Components/About/About';
@@ -17,13 +18,14 @@ import JoinUs from './Components/JoinUs/JoinUs';
 import Contact from './Components/Contact/Contact';
 import NotFoundPage from './NotFoundPage';
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
     super()
     this.state = {
       allPageData: [],
       isLoaded: false,
     }
+    this.progressBarRef = createRef();
   }
 
   componentDidMount() {
@@ -53,9 +55,11 @@ class App extends React.Component {
     }
     const pageData = this.state.allPageData;
     return (
-      <div>            
+      <div ref={this.progressBarRef}>            
         <Router>
-          <Header/>
+          <Header>          
+            <ProgressBar target={this.progressBarRef}/>
+          </Header>
           <div className='content-below-navbar'>
             <Switch>
                 <Route exact path='/' render={()=><Home pageData={pageData}/>}/>
