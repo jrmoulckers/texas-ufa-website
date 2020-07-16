@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import BasePage from '../BasePage'
+import './CorporatePartners.css';
 
 class CorporatePartners extends Component {
 

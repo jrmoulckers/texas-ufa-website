@@ -16,6 +16,7 @@ class Officer extends Component {
             officer_class_standing,
             officer_image, 
             officer_linked_page,
+            officer_ordering_number
         } = customFields;
 
         /**
@@ -26,10 +27,10 @@ class Officer extends Component {
          * *More details fade in on mouse hover*
          */
         return (
-            <a className="officer-card-container-link" href={officer_linked_page}>
+            <a className="officer-card-container-link" href={officer_linked_page} style={{order: `${officer_ordering_number}`}}>
                 <div className='officer-card'>
                     <div className='officer-image-container'>
-                        <img className='officer-image' src={officer_image.sizes.thumbnail} alt={title.rendered}/>
+                        <img className='officer-image' src={officer_image.sizes.large} alt={title.rendered}/>
                     </div>
                     <div className='officer-info-container'>
                         <h2 className='officer-name'>{title.rendered}</h2>

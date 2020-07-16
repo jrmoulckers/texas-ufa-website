@@ -43,7 +43,7 @@ class NavigationBar extends Component {
             <Link to='/about' className='nav-link'>About</Link>
           </li>
           <li>
-            <Link to='/investment-teams' className='nav-link'>Teams</Link>            
+            <Link to='/teams' className='nav-link'>Teams</Link>            
           </li>
           <li>
             <Link to='/officer-board' className='nav-link'>Board</Link>            
@@ -58,7 +58,6 @@ class NavigationBar extends Component {
             <Link to='/join-us' className='nav-link'>Join Us</Link>            
           </li>
           <li>
-            <Link to='/contact' className='nav-link'>Contact</Link>
           </li>
         </ul>
         {this.props.children}

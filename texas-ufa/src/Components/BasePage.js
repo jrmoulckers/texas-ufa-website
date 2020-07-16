@@ -50,6 +50,7 @@ class BasePage extends Component {
         var style = e.attr?.style? `style='${e.attr?.style}'` : '';
         var href = e.attr?.href? `href='${e.attr?.href}'` : (
             e.attr?.rel? `href='${e.attr?.rel}'` : '');
+        var target = e.attr?.target? `target='${e.attr?.target}'` : '';
         var src = e.attr?.src? `src='${e.attr?.src}'` : '';
         var rel = e.attr?.rel? `rel='${e.attr?.rel}'` : '';
 
@@ -58,10 +59,10 @@ class BasePage extends Component {
                 var alt = e.attr?.alt? `alt='${e.attr?.alt}'` : '';
                 var sizes = e.attr?.sizes? `sizes='${e.attr?.sizes}'` : '';
                 var srcset = e.attr?.srcset? `srcset='${e.attr?.srcset}'` : '';
-                content += `<${e.tag} ${className} ${style} ${href} ${src} ${alt} ${sizes} ${srcset} ${rel}></${e.tag}>`;
+                content += `<${e.tag} ${className} ${style} ${href} ${target} ${src} ${alt} ${sizes} ${srcset} ${rel}></${e.tag}>`;
                 break;
             default:
-                content += `<${e.tag} ${className} ${style} ${href} ${src} ${rel}>${childContent}</${e.tag}>`;
+                content += `<${e.tag} ${className} ${style} ${href} ${target} ${src} ${rel}>${childContent}</${e.tag}>`;
         }
         return content;
     }

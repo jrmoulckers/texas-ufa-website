@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollToTop from 'react-router-scroll-top';
 
 import Home from './Components/Home/Home';
 import Header from './Components/Header';
@@ -10,12 +11,11 @@ import ProgressBar from './Components/ProgressBar';
 import Footer from './Components/Footer';
 
 import About from './Components/About/About';
-import InvestmentTeams from './Components/InvestmentTeams/InvestmentTeams';
+import Teams from './Components/Teams/Teams';
 import OfficerBoard from './Components/Board/OfficerBoard';
 import Alumni from './Components/Alumni/Alumni';
 import CorporatePartners from './Components/CorporatePartners/CorporatePartners';
 import JoinUs from './Components/JoinUs/JoinUs';
-import Contact from './Components/Contact/Contact';
 import NotFoundPage from './NotFoundPage';
 
 class App extends Component {
@@ -57,23 +57,25 @@ class App extends Component {
     return (
       <div ref={this.progressBarRef}>            
         <Router>
-          <Header>          
-            <ProgressBar target={this.progressBarRef}/>
-          </Header>
-          <div className='content-below-navbar'>
-            <Switch>
-                <Route exact path='/' render={()=><Home pageData={pageData}/>}/>
-                <Route path='/about' render={()=><About pageData={pageData}/>}/>
-                <Route path='/investment-teams' render={()=><InvestmentTeams pageData={pageData}/>}/>
-                <Route path='/officer-board' render={()=><OfficerBoard pageData={pageData}/>}/>
-                <Route path='/alumni-network' render={()=><Alumni pageData={pageData}/>}/>
-                <Route path='/corporate-partners' render={()=><CorporatePartners pageData={pageData}/>}/>
-                <Route path='/join-us' render={()=><JoinUs pageData={pageData}/>}/>
-                <Route path='/contact' render={()=><Contact pageData={pageData}/>}/>
-                <Route path='*' component={NotFoundPage}/>
-            </Switch>
-          </div>
-          <Footer/>
+          <ScrollToTop>
+            <Header>          
+              <ProgressBar target={this.progressBarRef}/>
+            </Header>
+            <div className='content-below-navbar'>
+              <Switch>
+                  <Route exact path='/' render={()=><Home pageData={pageData}/>}/>
+                  <Route path='/about' render={()=><About pageData={pageData}/>}/>
+                  <Route path='/teams' render={()=><Teams pageData={pageData}/>}/>
+                  <Route path='/officer-board' render={()=><OfficerBoard pageData={pageData}/>}/>
+                  <Route path='/alumni-network' render={()=><Alumni pageData={pageData}/>}/>
+                  <Route path='/corporate-partners' render={()=><CorporatePartners pageData={pageData}/>}/>
+                  <Route path='/join-us' render={()=><JoinUs pageData={pageData}/>}/>
+                  <Route path='*' component={NotFoundPage}/>
+              </Switch>
+            </div>
+            <Footer/>
+          </ScrollToTop>
+          
         </Router>
       </div>
     );

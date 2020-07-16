@@ -1,0 +1,42 @@
+@import '../../index.css';
+
+.partnership-level {
+    padding: 2em;
+    border: .2vw solid;
+    margin-bottom: 1em;
+    z-index: 0;
+}
+
+.gold-partnership {
+    border-color: var(--ufa-gold);
+}
+
+.silver-partnership {
+    border-color: var(--ufa-silver);
+}
+
+.pay-per-meeting-partnership {
+    border-color: var(--ufa-light-green);
+}
+
+.partnership-level {
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+
+.gold-partnership:hover {
+    background-color: var(--ufa-gold);
+    opacity: .8;
+}
+
+.silver-partnership:hover {
+    background-color: var(--ufa-silver);
+    opacity: .8;
+}
+
+.pay-per-meeting-partnership:hover {
+    background-color: var(--ufa-light-green);
+    opacity: .8;
+}
