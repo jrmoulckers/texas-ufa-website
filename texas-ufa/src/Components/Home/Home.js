@@ -3,18 +3,39 @@ import BasePage from '../BasePage';
 import './Home.css';
 
 class Home extends Component {
+    constructor() {
+        super()
+        this.state = {
+          homeImage: undefined,
+        }
+    }
 
-    render() {
-        return (
-        <Fragment>
-            <div id='homepage-image-container'>
+    componentDidMount() {
+        this.loadHomeImage();
+    }
+
+    loadHomeImage() {
+        this.setState({
+            homeImage: (
                 <img 
                     src='https://texasufa.com/wp/wp-content/uploads/2020/07/Board.jpg'
                     id='homepage-image'
                 ></img>
-            </div>
-            <BasePage pageWPSlug='home' pageData={this.props.pageData}></BasePage>
-        </Fragment>
+            ),
+        })
+    }
+
+    render() {
+        if(!this.state.homeImage) {
+            return <div></div>;
+        };
+        return (
+            <Fragment>
+                <div id='homepage-image-container'>
+                    {this.state.homeImage}
+                </div>
+                <BasePage pageWPSlug='home' pageData={this.props.pageData}></BasePage>
+            </Fragment>
         );
     }
 }

@@ -1,6 +1,8 @@
 {
-  "short_name": "Texas UFA",
-  "name": "Create React App Sample",
+  "short_name": "UFA",
+  "name": "Texas UFA",
+  "author": "Jeffrey Moulckers",
+  "description": "Website for the University Finance Association at UT Austin",
   "icons": [
     {
       "src": "favicon.ico",

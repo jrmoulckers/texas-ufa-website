@@ -75,7 +75,6 @@ class App extends Component {
             </div>
             <Footer/>
           </ScrollToTop>
-          
         </Router>
       </div>
     );

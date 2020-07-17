@@ -1,7 +1,6 @@
 @import '../../index.css';
 
 .officer-page {
-    
 }
 
 .officers-container {
@@ -43,7 +42,8 @@
 
 .officers-container-inner {
     padding: 2em;
-    border: .2vw solid var(--ufa-dark-green);
+    /* border: .2vw solid var(--ufa-dark-green); */
+    background-color: var(--ufa-light);
     margin-bottom: 1em;
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +66,7 @@
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     overflow: hidden;
+    background-color: var(--ufa-white);
 }
 
 .officer-image-container {

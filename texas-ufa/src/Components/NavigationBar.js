@@ -1,5 +1,4 @@
 import React, {Component,} from 'react';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 import 'font-awesome/css/font-awesome.min.css';

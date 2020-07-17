@@ -10,7 +10,8 @@
 
 .investment-teams-description {
     padding: 2em;
-    border: .2vw solid var(--ufa-dark-green);
+    /* border: .2vw solid var(--ufa-dark-green); */
+    background-color: var(--ufa-light);
     margin-bottom: 1em;
 }
 
@@ -33,7 +34,8 @@
     margin-bottom: 1em;
     padding-top: .5em;
     padding-bottom: .5em;
-    border: .2vw solid var(--ufa-light-green);
+    border: .2vw solid var(--ufa-green);
+    background-color: var(--ufa-white);
     user-select:none;
 }
 
