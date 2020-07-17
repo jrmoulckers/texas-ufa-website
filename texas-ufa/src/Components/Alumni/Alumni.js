@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import BasePage from '../BasePage'
 
+import './Alumni.css';
+
 class Alumni extends Component {
 
     render() {

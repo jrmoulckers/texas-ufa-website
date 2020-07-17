@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import BasePage from '../BasePage'
 
+import './Teams.css';
+
 class Teams extends Component {
 
     render() {

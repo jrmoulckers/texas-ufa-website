@@ -1,10 +1,15 @@
 @import '../../index.css';
 
+.corporate-partners-description {
+    padding: 2em;
+    border: .2vw solid var(--ufa-dark-green);
+    margin-bottom: 1em;
+}
+
 .partnership-level {
     padding: 2em;
     border: .2vw solid;
     margin-bottom: 1em;
-    z-index: 0;
 }
 
 .gold-partnership {
@@ -20,23 +25,20 @@
 }
 
 .partnership-level {
-    -moz-transition: all .5s ease-in;
-    -o-transition: all .5s ease-in;
-    -webkit-transition: all .5s ease-in;
-    transition: all .5s ease-in;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
 }
 
 .gold-partnership:hover {
     background-color: var(--ufa-gold);
-    opacity: .8;
 }
 
 .silver-partnership:hover {
     background-color: var(--ufa-silver);
-    opacity: .8;
 }
 
 .pay-per-meeting-partnership:hover {
     background-color: var(--ufa-light-green);
-    opacity: .8;
 }

@@ -13,14 +13,6 @@
     text-align: center
 }
 
-@media screen and (min-width: 1150px) {
-    .base-page {
-        padding-top: 13vh;
-        padding-left: 25%;
-        padding-right: 25%;
-    }
-}
-
 p {
 
 }
@@ -50,7 +42,7 @@ hr, .has-text-color {
     color: var(--ufa-white);
     border: .2vw solid var(--ufa-dark-green) !important;
     background-color: var(--ufa-dark-green);
-    width: 10vw;
+    width: 20vw;
     height: 2em;
     line-height: 2em;
     cursor: pointer;
@@ -62,7 +54,7 @@ hr, .has-text-color {
 .wp-block-button * {
     display: flex;
     font-weight: 600;
-    font-size: 1.3vw;
+    font-size: 1em;
     color: inherit !important;
     line-height: 1;
     display: grid;
@@ -90,3 +82,18 @@ div.wp-block-button:hover, div.wp-block-button *:hover {
 }
 
 
+@media screen and (min-width: 900px) {
+    .base-page {
+        padding-top: 13vh;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .wp-block-button {
+        width: 10vw;
+    }
+    
+    .wp-block-button * {
+        font-size: 1.3em;
+    }
+}

@@ -7,6 +7,9 @@
 .officers-container {
     padding-left: 15%;
     padding-right: 15%;
+    margin: auto;
+    clear: both;
+    text-align: center;
 }
 
 .officers-container h1, 
@@ -38,14 +41,13 @@
     transform: translateX(0);
 }
 
-.officers-container {
-    margin: auto;
-    clear: both;
-    text-align: center;
+.officers-container-inner {
+    padding: 2em;
+    border: .2vw solid var(--ufa-dark-green);
+    margin-bottom: 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-auto-rows: 1fr;
 }
 
 .officer-card-container-link {
@@ -57,7 +59,6 @@
     vertical-align: top;
     text-align: left;
     height: 45vh;
-
 }
 
 .officer-card {
@@ -111,22 +112,21 @@
 
 @media screen and (max-width: 790px) {
     .officers-container {
-        margin: auto;
-        clear: both;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;   
-    }
+        padding-left: 5%;
+        padding-right: 5%;
+    }    
     
+    .officers-container-inner {
+        border: none;
+        padding: 0;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
     .officer-card-container-link {
-        top: 0;
-        width: 40%;
-        display: inline-block;
-        margin-bottom: 5%;
-        padding: 0 2%;
-        vertical-align: top;
-        text-align: left;
+        width: 45%;
+        max-height: 40vh;
+        padding: 2vw;
     }
     
     .officer-card {

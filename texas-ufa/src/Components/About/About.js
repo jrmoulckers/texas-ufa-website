@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import BasePage from '../BasePage'
 
+import './About.css';
+
 class About extends Component {
 
     render() {

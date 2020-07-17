@@ -19,7 +19,7 @@
   --ufa-grey: #5f665e;
   --ufa-light-grey: #949494;
 
-  --ufa-gold: #c9b037;
+  --ufa-gold: #d3c05f;
   --ufa-silver: #b4b4b4;
   --ufa-light-gold: lighten(var(--ufa-gold), 50%);
   --ufa-light-silver: lighten(var(--ufa-silver), 50%);
@@ -181,7 +181,7 @@ strong {
   z-index: 2;
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 900px) {
   .content-below-navbar {
     padding-top: 13vh;
   }

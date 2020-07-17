@@ -23,10 +23,13 @@ class OfficerTeam extends Component {
         console.log(officers);
         return (
             <div className='officers-container'>
-                {/* Map each officer to display */}
-                {officers?.map(officer => (
-                    <Officer key={officer.id} officer={officer}/>
-                ))}
+                <div className='officers-container-inner'>
+                    {/* Map each officer to display */}
+                    {officers?.map(officer => (
+                        <Officer key={officer.id} officer={officer}/>
+                    ))}
+                </div>
+
             </div>
         );
     }

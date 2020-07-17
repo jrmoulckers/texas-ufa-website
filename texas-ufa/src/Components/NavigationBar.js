@@ -1,5 +1,7 @@
 import React, {Component,} from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 import 'font-awesome/css/font-awesome.min.css';
 import './NavigationBar.css';
 
@@ -21,7 +23,7 @@ class NavigationBar extends Component {
         >
           <i className='fa fa-bars noselect'></i>
         </div>
-        <Link to='/'>
+        <HashLink to='/'>
           <div className='nav-brand'>
                 <img 
                   id='brand-logo-img'
@@ -30,32 +32,34 @@ class NavigationBar extends Component {
                   alt='Texas UFA Brand Logo'
                 ></img>
           </div>        
-        </Link>
-
+        </HashLink>
         <ul 
           className={`nav-list ${!this.state.collapsed&&'active'}`} 
           id='js-menu'
         >
           <li>
-            <Link to='/' className='nav-link'>Home</Link>
+            <HashLink to='/' className='nav-link'>Home</HashLink>
           </li>
           <li>
-            <Link to='/about' className='nav-link'>About</Link>
+            <HashLink to='/about' className='nav-link'>About</HashLink>
+          </li>
+          <li
+            onMouseEnter={this.handleMouseHover}
+            onMouseLeave={this.handleMouseHover}
+          >
+            <HashLink to='/teams' className='nav-link'>Teams</HashLink> 
           </li>
           <li>
-            <Link to='/teams' className='nav-link'>Teams</Link>            
+            <HashLink to='/officer-board' className='nav-link'>Board</HashLink>            
           </li>
           <li>
-            <Link to='/officer-board' className='nav-link'>Board</Link>            
+            <HashLink to='/alumni-network' className='nav-link'>Alumni</HashLink>            
           </li>
           <li>
-            <Link to='/alumni-network' className='nav-link'>Alumni</Link>            
+            <HashLink to='/corporate-partners' className='nav-link'>Partners</HashLink>           
           </li>
           <li>
-            <Link to='/corporate-partners' className='nav-link'>Partners</Link>           
-          </li>
-          <li>
-            <Link to='/join-us' className='nav-link'>Join Us</Link>            
+            <HashLink to='/join-us' className='nav-link'>Join Us</HashLink>            
           </li>
           <li>
           </li>

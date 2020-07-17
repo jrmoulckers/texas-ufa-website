@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import BasePage from '../BasePage'
 
+import './JoinUs.css';
+
 class JoinUs extends Component {
 
     render() {

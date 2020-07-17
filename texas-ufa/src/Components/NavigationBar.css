@@ -9,6 +9,9 @@
 
 .nav-brand {
     max-height: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .nav-list {
@@ -21,19 +24,19 @@
 .nav-link,
 .nav-brand {
     text-decoration: none;
+    text-align: center;
     color: var(--ufa-light);
     white-space: nowrap;
+
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 
 .nav-list li {
     text-align: center;
     margin: .75em auto;
-}
-
-.nav-brand {
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 20px;
 }
 
 .navbar-toggle {
@@ -59,7 +62,7 @@
     color: var(--ufa-white);
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 900px) {
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -83,8 +86,9 @@
     }
 
     .nav-link {
-        font-size: 1.35em;
-        margin-left: 2em;
+        font-size: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     .nav-brand {

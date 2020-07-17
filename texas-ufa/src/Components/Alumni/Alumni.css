@@ -1,0 +1,19 @@
+@import '../../index.css';
+
+.alumni-title {
+
+}
+
+.alumni-description {
+    padding: 2em;
+    border: .2vw solid var(--ufa-dark-green);
+    margin-bottom: 1em;
+}
+
+.alumni-blurb {
+    
+}
+
+.alumni-contact {
+    
+}

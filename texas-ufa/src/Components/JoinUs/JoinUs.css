@@ -1,0 +1,45 @@
+@import '../../index.css';
+
+.join-title {
+
+}
+
+.join-get-involved-title {
+
+}
+
+.membership-fees-title {
+
+}
+
+.join-membership-fees {
+    padding: 2em;
+    border: .2vw solid var(--ufa-dark-green);
+    margin-bottom: 1em;
+}
+
+.join-contact-info {
+    padding: 2em;
+    border: .2vw solid var(--ufa-dark-green);
+    margin-bottom: 1em;
+}
+
+.join-follow-us-title {
+
+}
+
+.join-follow-us-description {
+
+}
+
+.join-facebook-link {
+
+}
+
+.join-instagram-link {
+
+}
+
+.join-twitter-link {
+
+}

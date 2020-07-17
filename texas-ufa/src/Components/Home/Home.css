@@ -1,5 +1,31 @@
 @import '../../index.css';
 
+.home-mission-statement {
+    padding: 2em;
+    font-weight: 600;
+    border: .2vw solid var(--ufa-dark-green);
+    margin-bottom: 1em;
+
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.home-mission-statement:hover {
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;    
+    background-color: var(--ufa-light-green);
+}
+
+.home-join-us-description {
+    padding: 2em;
+    border: .2vw solid var(--ufa-dark-green);
+    margin-bottom: 1em;
+}
+
 #wp-page-home {
     padding-top: 5vh;
 }
@@ -14,10 +40,10 @@
     transform: translateY(0);
     -ms-transform: translateY(0);
     width: 100%;
-    opacity: .80;
+    opacity: .8;
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 900px) {
     
     #wp-page-home {
         padding-top: 10vh;
