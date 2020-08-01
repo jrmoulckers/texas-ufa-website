@@ -20,7 +20,6 @@ class OfficerTeam extends Component {
 
     render() {
         const {officers,} = this.state;
-        console.log(officers);
         return (
             <div className='officers-container'>
                 <div className='officers-container-inner'>
